@@ -2,10 +2,13 @@
 
 read -p "What compression quality would you like when converting images to webp? " quality_level
 
-mkdir ../webp
-
 for img in *; do
     cwebp -q $quality_level -af -m 6 $img -o "${img%.*}.webp"
 done
 
-mv *.webp ../webp
+# Check if parent dir "webp" does not exist (if not, make new dir)
+if [[ ! -d "../webp" ]]; then
+    mkdir "../webp"
+fi
+
+mv *.webp "../webp"
