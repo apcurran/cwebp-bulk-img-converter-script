@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+#! /bin/sh
 
 read -p "What compression quality would you like when converting images to webp? (0-100) " quality_level
 
@@ -7,7 +7,7 @@ for img in *; do
 done
 
 # Check if parent dir "webp" does not exist (if not, make new dir)
-if [[ ! -d "../webp" ]]; then
+if [ ! -d "../webp" ]; then
     mkdir "../webp"
 fi
 
