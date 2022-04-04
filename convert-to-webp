@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/usr/bin/env bash
 
 read -p "What compression quality would you like when converting images to webp? (0-100) " quality_level
 
