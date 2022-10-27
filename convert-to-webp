@@ -11,4 +11,4 @@ if [ ! -d "../webp" ]; then
     mkdir "../webp"
 fi
 
-mv *.webp "../webp"
+mv ./*.webp "../webp"
