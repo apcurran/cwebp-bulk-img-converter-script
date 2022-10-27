@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-read -p "What compression quality would you like when converting images to webp? (0-100) " quality_level
+read -rp "What compression quality would you like when converting images to webp? (0-100) " quality_level
 
 for img in *; do
     cwebp -q "$quality_level" -af -m 6 "$img" -o "${img%.*}.webp"
